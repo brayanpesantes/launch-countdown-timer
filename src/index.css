@@ -1,0 +1,28 @@
+@tailwind base;
+body {
+  font-family: "Red Hat Text", sans-serif;
+}
+@tailwind components;
+@tailwind utilities;
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  left: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(234, 17%, 12%);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5rem);
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: hsl(234, 17%, 12%);
+  z-index: 1;
+}
