@@ -10,7 +10,7 @@ export default function CountdownTimer() {
 
   return (
     <div className={`relative w-64 h-32 perspective`}>
-      <div className="flex flex-row items-center justify-center gap-8">
+      <div className="flex flex-row items-center justify-center gap-5 md:gap-8">
         <TimeCard value={days} label="days" />
         <TimeCard value={hours} label="hours" />
         <TimeCard value={minutes} label="minutes" />

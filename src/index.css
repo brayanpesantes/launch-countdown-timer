@@ -26,3 +26,11 @@ body {
   background-color: hsl(234, 17%, 12%);
   z-index: 1;
 }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

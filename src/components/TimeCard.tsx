@@ -19,8 +19,8 @@ export function TimeCard({ value, label }: Readonly<TimeCardProps>) {
   }, [value, displayedValue]);
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className="relative w-[142px] h-[150px] rounded-lg overflow-hidden text-7xl  shadow-xl shadow-blue-very-dark-mostly card bg-blue-very-dark ">
+    <div className="flex flex-col justify-center gap-6">
+      <div className="relative h-[72px] w-[65px] md:w-[142px] md:h-[150px] rounded-lg overflow-hidden text-3xl md:text-7xl  shadow-xl shadow-blue-very-dark-mostly card bg-blue-very-dark ">
         <AnimatePresence mode="popLayout">
           <motion.div
             key={displayedValue}
@@ -38,21 +38,20 @@ export function TimeCard({ value, label }: Readonly<TimeCardProps>) {
             className="h-full flex flex-col"
           >
             <div className="flex-1 flex items-end justify-center text-red-soft bg-blue-dark-desaturated  rounded-t-md font-bold border-b-[1px] border-blue-grayish">
-              <p className="-mb-9">
+              <p className="-mb-5 md:-mb-9">
                 {displayedValue.toString().padStart(2, "0")}
               </p>
             </div>
-            <div className="flex-1 flex items-start justify-center text-red-soft font-bold rounded-b-md bg-blue-dark-desaturated">
-              <p className="-mt-9">
+            <div className="flex-1 flex items-start justify-center b text-red-soft font-bold rounded-b-md bg-blue-dark-desaturated">
+              <p className="-mt-4 md:-mt-9">
                 {displayedValue.toString().padStart(2, "0")}
               </p>
             </div>
           </motion.div>
         </AnimatePresence>
-        <div className="absolute inset-0 pointer-events-none shadow-inner rounded-lg" />
       </div>
       <motion.p
-        className="text-sm text-blue-grayish uppercase tracking-[0.25rem] text-center"
+        className="text-[10px] md:text-sm text-blue-grayish uppercase tracking-[0.25rem] text-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
